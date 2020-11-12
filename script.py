@@ -4,6 +4,7 @@ lpthw-github
 
 import sys
 import requests
+from exchangeratesapi import Api
 
 
 def do_nothing():
@@ -19,6 +20,14 @@ def goodbye():
 # Printing "Hello World!"
 def print_hello():
     print("Hello World!")
+
+
+# Print exchange rates
+def get_exchange_rates():
+    api = Api()
+
+    # Get the latest foreign exchange rates:
+    print(api.get_rates('USD'))
 
 
 # Get a Random Quote.
@@ -38,6 +47,8 @@ if __name__ == '__main__':
 
     if arg == "hello":
         print_hello()
+    elif arg == "rates":
+        get_exchange_rates()
     elif arg == "goodbye":
         goodbye()
     elif arg == "quote":
