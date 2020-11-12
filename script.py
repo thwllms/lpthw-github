@@ -30,8 +30,10 @@ def get_exchange_rates():
     print(api.get_rates('USD'))
 
 
-# Get a Random Quote.
 def get_quote():
+    """
+    Get a random quote from an online api.
+    """
     url = "https://programming-quotes-api.herokuapp.com/quotes/random"
     r = requests.get(url)
     dict = r.json()
