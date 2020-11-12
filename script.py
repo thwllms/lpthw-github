@@ -3,19 +3,24 @@ lpthw-github
 """
 
 import sys
+import requests
 from exchangeratesapi import Api
+
 
 def do_nothing():
     # this does nothing
     pass
 
+
 def goodbye():
     # print goodbye world
     print("Goodbye, World ¯\_(ツ)_/¯")
 
+
 # Printing "Hello World!"
 def print_hello():
     print("Hello World!")
+
 
 # Print exchange rates
 def get_exchange_rates():
@@ -23,6 +28,16 @@ def get_exchange_rates():
 
     # Get the latest foreign exchange rates:
     print(api.get_rates('USD'))
+
+
+# Get a Random Quote.
+def get_quote():
+    url = "https://programming-quotes-api.herokuapp.com/quotes/random"
+    r = requests.get(url)
+    dict = r.json()
+    quote = dict['en']
+
+    print(quote)
 
 
 if __name__ == '__main__':
@@ -36,5 +51,7 @@ if __name__ == '__main__':
         get_exchange_rates()
     elif arg == "goodbye":
         goodbye()
+    elif arg == "quote":
+        get_quote()
     else:
         print("nothing")
