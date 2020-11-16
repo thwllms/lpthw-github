@@ -30,6 +30,10 @@ def get_exchange_rates():
     print(api.get_rates('USD'))
 
 
+def qwerty():
+    print('qwerty')
+
+
 def get_quote():
     """
     Get a random quote from an online api.
@@ -57,6 +61,8 @@ if __name__ == '__main__':
         get_exchange_rates()
     elif arg == "goodbye":
         goodbye()
+    elif arg == 'qwerty':
+        qwerty()
     elif arg == "quote":
         get_quote()
     elif arg == 'blah':
