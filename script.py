@@ -50,6 +50,10 @@ def blah():
     print('blah')
 
 
+def asdf():
+    print("asdf testing...")
+
+
 if __name__ == '__main__':
     do_nothing()
 
@@ -67,5 +71,7 @@ if __name__ == '__main__':
         get_quote()
     elif arg == 'blah':
         blah()
+    elif arg == 'asdf':
+        asdf()
     else:
         print("nothing")
