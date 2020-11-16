@@ -40,6 +40,10 @@ def get_quote():
     print(quote)
 
 
+def blah():
+    print('blah')
+
+
 if __name__ == '__main__':
     do_nothing()
 
@@ -53,5 +57,7 @@ if __name__ == '__main__':
         goodbye()
     elif arg == "quote":
         get_quote()
+    elif arg == 'blah':
+        blah()
     else:
         print("nothing")
