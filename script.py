@@ -50,6 +50,11 @@ def blah():
     print('blah')
 
 
+def city():
+	city_name = input("Which city do you live in? ")
+	print('Greetings to {}!'.format(city_name))
+
+
 if __name__ == '__main__':
     do_nothing()
 
@@ -67,5 +72,7 @@ if __name__ == '__main__':
         get_quote()
     elif arg == 'blah':
         blah()
+    elif arg == 'city':
+    	city()
     else:
         print("nothing")
